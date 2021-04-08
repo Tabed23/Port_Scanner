@@ -1,12 +1,12 @@
 pipeline {
   agent any {
     tools {
-      go 'go.1.16.3'
+        go 'go-1.16.2'
     }
-     environment {
+    environment {
         GO111MODULE = 'on'
     }
-     stages {
+    stages {
         stage('Compile') {
             steps {
                 sh 'go build'
